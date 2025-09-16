@@ -1,0 +1,27 @@
+#! /bin/bash
+
+usr=$1
+pss=$2
+age=$3
+
+if [[ $usr != "Andrei" || $pss != "psswd" ]]; then
+	echo "Access denied. User SAU poarola gresita"
+	exit 2
+fi
+
+echo "Acum verificam varsta" 
+
+if [[ "$age" =~ ^-?[0-9]+.?([0-9]+)?$ ]]; then
+       echo "Varsta este numar intreg" 
+else
+       echo "Varsta nu este numar"
+       exit 3
+fi
+
+if [  "$age" -ge 18 ]; then
+      echo "Varsta ok. Esti logat"
+      echo "Afiseaza site.."
+      # Aici facem....
+      exit 0
+fi
+
