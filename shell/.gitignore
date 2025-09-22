@@ -1,3 +1,5 @@
-shell/hello.log
+*.swp
 *.log
+nohup.out
 tmp/
+
