@@ -16,5 +16,11 @@ pipeline {
                 sh 'ls -R | head -20'
             }
         }
+        stage('Info proiect') {
+            steps {
+                sh 'pwd'
+                sh 'ls -al'
+            }
+        }
     }
 }
