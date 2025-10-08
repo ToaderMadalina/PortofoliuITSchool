@@ -1,0 +1,16 @@
+Jenkinsfile.hello
+pipeline {
+    agent any
+
+    environment {
+        DIR_LUCRU = "jenkins/curs"
+    }
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello, World from Jenkins File!'
+            }
+        }
+    }
+}
