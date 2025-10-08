@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo "✅ Salut! Jenkins rulează corect fișierul din subfolder."
+                sh 'pwd'
+                sh 'ls -l'
+            }
+        }
+
+        stage('Verificare SCM') {
+            steps {
+                echo "📁 Verific directorul curent din workspace:"
+                sh 'ls -R | head -20'
+            }
+        }
+    }
+}
